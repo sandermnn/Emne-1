@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kult</title>
+</head>
+
+<body>
+
+    <style>
+        #Topp {
+            background-color: rgb(47, 152, 184);
+            padding: 3em;
+            overflow-x: auto;
+            height: 100px;
+            width: fit-content;
+            overflow: hidden;
+        }
+
+        #overskrift {
+            color: rgb(245, 245, 245);
+            text-shadow: 3px 3px black,
+                2px 2px black,
+                2px 2px black,
+                2px 2px black,
+                2px 2px black,
+                2px 2px black;
+
+
+        }
+
+        #controls {
+            display: flex;
+            align-items: center;
+            margin-top: 1em;
+
+        }
+
+        #teller {
+            color: rgb(245, 245, 245);
+            margin-left: 1em;
+            font-size: x-large;
+            border-style: inset;
+
+
+        }
+    </style>
+
+    <div id="Topp">
+        <h1 id="overskrift">whatdis</h1>
+        <div id="controls">
+            <button onclick="minusknapp()">-</button>
+            <button onclick="plusknapp()">+</button>
+            <div id="teller">0</div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        let teller = 0;
+
+        function minusknapp() {
+            teller--;
+            document.getElementById("teller").textContent = teller;
+        }
+
+        function plusknapp() {
+            teller++;
+            document.getElementById("teller").textContent = teller;
+
+        }
+        
+        
+        </script>
+
+
+</body>
+
+</html>

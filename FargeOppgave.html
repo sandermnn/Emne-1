@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            border-style: ridge;
+            border-width: 5px;
+            margin: 25px;
+            text-align: center;
+            background-color: indianred;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            font-weight: 100;
+        }
+
+        #tomdiv1,
+        #tomdiv2 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 25px;
+            border-radius: 35%;
+
+
+        }
+    </style>
+
+    <div id="mainDiv">
+        <h1>IndianRed</h1>
+        <br>
+        <button onclick="Endrefarge1()">Endre farge!</button>
+    </div>
+
+
+    <div id="secondDiv">
+        <h1>Skyblue</h1>
+        <br>
+        <button onclick="Endrefarge2()">Endre farge!</button>
+    </div>
+
+    <div id="thirdDiv">
+        <h1>Peru</h1>
+        <br>
+        <button onclick="Endrefarge3()">Endre farge!</button>
+    </div>
+
+    <div id="tomdiv1" onclick="Endrefarge()"></div>
+
+    <div id="tomdiv2" onclick="Endrefarge5()"></div>
+
+
+
+
+    <script>
+        let mainDiv = document.getElementById("mainDiv");
+        mainDiv.style.backgroundColor = "IndianRed";
+
+        let secondDiv = document.getElementById("secondDiv");
+        secondDiv.style.backgroundColor = "Skyblue";
+
+        let thirdDiv = document.getElementById("thirdDiv");
+        thirdDiv.style.backgroundColor = "Peru";
+
+        const indianred = "indianred";
+        const skyBlue = "SkyBlue"
+        const peru = "Peru";
+
+        let velgeFarge = "";
+
+        function Endrefarge1() {
+            velgeFarge = indianred;
+            document.body.style.backgroundColor = velgeFarge;
+        }
+        function Endrefarge2() {
+            velgeFarge = skyBlue;
+            document.body.style.backgroundColor = velgeFarge;
+        }
+        function Endrefarge3() {
+            velgeFarge = peru;
+            document.body.style.backgroundColor = velgeFarge;
+        }
+
+        function Endrefarge() {
+            document.getElementById("tomdiv1").style.backgroundColor = velgeFarge;
+
+        }
+        function Endrefarge5() {
+            document.getElementById("tomdiv2").style.backgroundColor = velgeFarge;
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
