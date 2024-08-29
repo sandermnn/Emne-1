@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: aquamarine;
+}
+
+button {
+    background-color: lightgrey;
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#Keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    width: 100%;  
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Keyboard button {
+    padding: 15px;
+    background-color: lightgray;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#Keyboard button:active {
+    background-color: lightskyblue;
+}
+
+input[type="text"] {
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%; 
+    max-width: 600px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastatur</title>
+    <link rel="stylesheet" href="tastatu.css">
+
+</head>
+
+<body>
+
+    <input type="text" id="tekstFelt">
+
+    <div id="Keyboard">
+        <button onclick="pushedLetter(this)">Q</button>
+        <button onclick="pushedLetter(this)">W</button>
+        <button onclick="pushedLetter(this)">E</button>
+        <button onclick="pushedLetter(this)">R</button>
+        <button onclick="pushedLetter(this)">T</button>
+        <button onclick="pushedLetter(this)">Y</button>
+        <button onclick="pushedLetter(this)">U</button>
+        <button onclick="pushedLetter(this)">I</button>
+        <button onclick="pushedLetter(this)">O</button>
+        <button onclick="pushedLetter(this)">P</button>
+        <button onclick="pushedLetter(this)">Å</button>
+        <button onclick="pushedLetter(this)">A</button>
+        <button onclick="pushedLetter(this)">S</button>
+        <button onclick="pushedLetter(this)">D</button>
+        <button onclick="pushedLetter(this)">F</button>
+        <button onclick="pushedLetter(this)">G</button>
+        <button onclick="pushedLetter(this)">H</button>
+        <button onclick="pushedLetter(this)">J</button>
+        <button onclick="pushedLetter(this)">K</button>
+        <button onclick="pushedLetter(this)">L</button>
+        <button onclick="pushedLetter(this)">Ø</button>
+        <button onclick="pushedLetter(this)">Æ</button>
+        <button onclick="pushedLetter(this)">Z</button>
+        <button onclick="pushedLetter(this)">X</button>
+        <button onclick="pushedLetter(this)">C</button>
+        <button onclick="pushedLetter(this)">V</button>
+        <button onclick="pushedLetter(this)">B</button>
+        <button onclick="pushedLetter(this)">N</button>
+        <button onclick="pushedLetter(this)">M</button>
+
+
+    </div>
+
+    <script>
+            function pushedLetter(element){
+               let bokstaver = element.innerHTML;
+               let tekstFelt = document.getElementById("tekstFelt");
+               tekstFelt.value += bokstaver;
+            }
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
