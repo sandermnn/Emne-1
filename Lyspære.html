@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lyspære.css">
+
+</head>
+
+<body>¨
+
+
+    
+
+    <img id="Pære" src="Emne 1/img/lys.png.jpg">
+
+
+    <img id="Knapp" onclick="endreFarge()" src="Emne 1/img/emergency-button.png">
+
+
+
+
+    <script>
+
+        function endreFarge() {
+            var pære = document.getElementById("Pære");
+
+            if(pære.classList.contains("lyser")) {
+                pære.classList.remove("lyser");
+
+            } else {
+                pære.classList.add("lyser");
+           
+            }
+
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
