@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .Yes {
+            border: 1px;
+            border-style: solid;
+            width: 350px;
+            padding: 2%;
+            margin: 50px;
+            margin-left: 350px;
+        }
+
+        button {
+            margin-left: 500px;
+
+        }
+    </style>
+
+    <div id="divOne" class="Yes">
+        Her Er en enkel tekst for oppgaven sin skyld
+        <br>
+        Det skal bare være en tekst så man kan se på det
+        <br>
+        Det blir bra styling på denne ja så her er den
+
+    </div>
+
+    <div id="divTwo" class="Yes">
+        Her Er en enkel tekst for oppgaven sin skyld
+        <br>
+        Det skal bare være en tekst så man kan se på det
+        <br>
+        Det blir bra styling på denne ja så her er den
+
+    </div>
+
+    <div id="divThree" class="Yes">
+        Her Er en enkel tekst for oppgaven sin skyld
+        <br>
+        Det skal bare være en tekst så man kan se på det
+        <br>
+        Det blir bra styling på denne ja så her er den
+
+    </div>
+
+    <button id="Farge"
+        onclick="endreFarge('divOne','IndianRed'); endreFarge('divTwo','skyBlue'); endreFarge('divThree','Indigo')" >Endre</button>
+
+        <button id="Bredde" onclick="endreW('divOne', '42px'); endreW('divTwo','120px'); endreW('divThree','480px')">Bread</button>
+
+    <script>  function endreFarge(elementId, color) {
+            var element = document.getElementById(elementId);
+            element.style.backgroundColor = color;
+
+
+        }
+        function endreW(elementId, width) {
+            var element = document.getElementById(elementId);
+            element.style.width = width;
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
