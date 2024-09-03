@@ -6,6 +6,8 @@
     height: auto;
     margin-bottom: 10px;
     transition: filter 0.3s ease; 
+    opacity: 0.4;
+    transition: opacity 0.5 ease;
 
 
 
@@ -23,5 +25,16 @@
 
 #Pære.lyser {
     filter: sepia(100%) hue-rotate(45deg) saturate(500%);
-    box-shadow: 0 0 30px 30px rgba(255, 223, 0, 0.7);
+    box-shadow: 0 0 30px 30px rgba(254, 6, 6, 0.7);
+    opacity: 1;
+}
+
+div{
+    margin-left: 840px;
+    border-style: double;
+    width: 30px; 
+    border-radius: 70px;
+    padding: 2px;
+    font-size: large;
+    
 }

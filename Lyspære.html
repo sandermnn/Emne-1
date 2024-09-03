@@ -9,12 +9,12 @@
 
 </head>
 
-<body>¨
-
-
-    
+<body>
 
     <img id="Pære" src="Emne 1/img/lys.png.jpg">
+
+    <div id="showonoroff">AV</div>
+
 
 
     <img id="Knapp" onclick="endreFarge()" src="Emne 1/img/emergency-button.png">
@@ -26,17 +26,31 @@
 
         function endreFarge() {
             var pære = document.getElementById("Pære");
+            var status = document.getElementById("showonoroff");
 
-            if(pære.classList.contains("lyser")) {
+
+            if (pære.classList.contains("lyser")) {
                 pære.classList.remove("lyser");
+                status.innerHTML = "AV";
 
             } else {
                 pære.classList.add("lyser");
-           
+                status.innerHTML = "PÅ";
+
             }
+
+            
 
 
         }
+
+
+
+
+
+    </script>
+
+
 
 
 
