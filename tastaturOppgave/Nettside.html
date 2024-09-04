@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boks Generator</title>
+</head>
+
+
+<style>
+    /* Style containere som holder alle boksene*/
+    #container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 10px;
+        margin: 10vh;
+
+
+
+    }
+ /* Style vær individuell boks*/
+    .boks {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+
+
+    }
+</style>
+
+<body>
+
+    <button id="addBoksKnapp">Legg til en boks</button>
+    <input type="text" id="colorInput" placeholder="Skriv inn fargenavn">
+    <button id="changeColorknapp" onclick="changeColor('orange');">Endre farge på alle boksene</button>
+    <button id="changeColorInput" onclick="changeColorFromInput()">Endre farge fra input</button>
+
+    <div id="container"></div>
+
+
+
+
+    <script>
+        var addBoks = document.getElementById('addBoksKnapp');
+        var container = document.getElementById('container');
+        var boksCount = 1;
+
+
+        var farger = ["red", "blue", "green", "yellow", "purple"];
+
+
+        addBoks.addEventListener('click', function () {
+            var nyBoks = document.createElement('div');
+            nyBoks.classList.add('boks');
+            nyBoks.innerHTML = "Boks #" + boksCount;
+
+
+
+            var tilfeldigFarge = farger[Math.floor(Math.random() * farger.length)];
+            nyBoks.style.backgroundColor = tilfeldigFarge;
+
+
+
+            container.appendChild(nyBoks);
+            boksCount++;
+
+
+
+        });
+
+        function changeColor(color) {
+            var alleBokser = document.getElementsByClassName('boks');
+            for (var i = 0; i < alleBokser.length; i++) {
+                alleBokser[i].style.backgroundColor = color;
+            }
+
+        }
+
+        function changeColorFromInput() {
+            var valgtFarge = document.getElementById('colorInput').value;
+            var alleBokser = document.getElementsByClassName('boks');
+            for (var i = 0; i < alleBokser.length; i++) {
+                alleBokser[i].style.backgroundColor = valgtFarge;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
