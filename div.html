@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz</title>
+    </head>
+
+    <body>
+
+
+        <div>
+            <p>1. Er HTML et programmeringsspråk?</p>
+            <button onclick="checkAnswer(this,'green')">Nei</button>
+            <button onclick="checkAnswer(this, 'red')">Ja</button>
+            <div id="result1"></div>
+        </div>
+
+
+        <div>
+            <p>2. Kan JavaScript brukes til å lage dynamiske nettsider?</p>
+            <button onclick="checkAnswer(this,'green')">Ja</button>
+            <button onclick="checkAnswer(this, 'red')">Nei</button>
+            <div id="result2"></div>
+        </div>
+
+
+        <div>
+            <p>3. Er CSS ansvarlig for nettsidens struktur?</p>
+            <button onclick="checkAnswer(this,'green')">Nei</button>
+            <button id="feilTre" onclick="checkAnswer(this, 'red')">Ja</button>
+            <div id="result3"></div>
+        </div>
+
+        <script>
+
+            const green = "green"
+            const red= "red"
+
+            function checkAnswer(button, color){
+                button.style.background = color;
+
+            }
+
+
+        </script>
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>
