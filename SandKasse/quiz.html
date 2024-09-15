@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>Hva er hovedstaden i Tyskland?</div>
+    <button id="riktigSvara" onclick="sjekkeSvare(this, 'green')">Berlin</button>
+    <button id="riktigSvarb" onclick="sjekkeSvare(this, 'red')">Munchien</button>
+
+    <div>Hva er hovedstaden i Frankrike?</div>
+    <button id="riktigSvarc" onclick="sjekkeSvare(this, 'red')">Lyon</button>
+    <button id="riktigSvard" onclick="sjekkeSvare(this, 'green')">Paris</button>
+
+    <div>Hva er hovedstaden i Spania?</div>
+    <button id="riktigSvare" onclick="sjekkeSvare(this, 'green')">Madrid</button>
+    <button id="riktigSvarf" onclick="sjekkeSvare(this, 'red')">Sevilla</button>
+
+
+    <div id="poengTeller" onclick="fullførtSjekk()"> Poeng : </div>
+    <div> &#x2191 Trykk her Når du er ferdig :D</div>
+   
+
+
+
+    <script>
+
+        let poeng = 0;
+
+
+
+        let green = "green"
+        let red = "red"
+
+        function sjekkeSvare(button, color) {
+            button.style.color = color;
+
+            if (color === "green") {
+                poeng++;
+
+
+            } else if (color === "red")
+                poeng--;
+
+            document.getElementById("poengTeller").innerHTML = "Poeng " + poeng;
+
+            button.disabled = true;
+        }
+
+
+        function fullførtSjekk() {
+
+            if (poeng === 3) {
+                document.getElementById("poengTeller").style.color = "green";
+                document.getElementById("poengTeller").innerHTML += " - Bra Jobba! Alt riktig!";
+
+            } else if (poeng >= 1) {
+                document.getElementById("poengTeller").style.color = "orange";
+                document.getElementById("poengTeller").innerHTML += " - Du gjorde det helt greit";
+            } else {
+                document.getElementById("poengTeller").style.color = "red";
+                document.getElementById("poengTeller").innerHTML += " - prøv igjen! Null Rikitig;/";
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
