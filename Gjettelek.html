@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="tilfeldigTall">0</div>
+    <input id="Skriv" type="number">
+    <button id="knapp" onclick="randomTall()">Sjekk Svar</button>
+
+    <p>Du har gjettet &#8595</p>
+    <div id="tilbakemelding"></div>
+
+
+    <div id="forsokTeller">0</div>
+
+
+
+    <script>
+
+        let forsok = 0;
+
+        function randomTall() {
+
+            let tall1 = Math.floor(Math.random() * 10) + 1;
+
+            document.getElementById('tilfeldigTall').innerHTML = tall1;
+
+            let brukerInput = document.getElementById("Skriv").value;
+            let tall = Number(brukerInput);
+
+
+            forsok++;
+            document.getElementById('forsokTeller').innerHTML = "Antall forsøk: " + forsok;
+
+
+            if (tall < 1 || tall > 10) {
+                document.getElementById('tilbakemelding').innerHTML = "Ugyldig tall! Skriv et tall mellom 1 og 10.";
+                document.getElementById("tilbakemelding").style.color = "orange";
+                return;  
+            }
+
+            if (tall === tall1) {
+                document.getElementById("tilbakemelding").innerHTML = "Der hadde du flaks :)";
+                document.getElementById("tilbakemelding").style.color = "green";
+            } else {
+                document.getElementById("tilbakemelding").innerHTML = "L BOZO";
+                document.getElementById("tilbakemelding").style.color = "red";
+
+            }
+            document.getElementById("Skriv").value = '';
+
+        }
+
+    </script>
+</body>
+
+</html>

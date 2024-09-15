@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>Hva er hovestaden i Norge?</div>
+
+    <button id="svar1" onclick="sjekkeSvar('Oslo')"> Oslo</button>
+    <button id="svar2" onclick="sjekkeSvar('Trondheim')"> Trondheim</button>
+    <div id="tilbakemelding"></div>
+
+
+    <script>
+        function sjekkeSvar(svar) {
+            let riktigSvar = "Oslo";
+
+            if (svar === riktigSvar) {
+                document.getElementById("tilbakemelding").innerHTML = "Riktig svar!";
+                document.getElementById("tilbakemelding").style.color = "green";
+            } else {
+                document.getElementById("tilbakemelding").innerHTML = "Feil svar.";
+                document.getElementById("tilbakemelding").style.color = "red";
+
+            }
+
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
