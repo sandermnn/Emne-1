@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="resultat"></div>
+
+
+
+    <script>
+        const countVokal = (str) => {
+            const vokal = {
+                'a': 0,
+                'e': 0,
+                'i': 0,
+                'o': 0,
+                'u': 0,
+                'y': 0,
+                'æ': 0,
+                'ø': 0,
+                'å': 0,
+            };
+
+            for (let i = 0; i < str.length; i++) {
+                let char = str[i].toLowerCase();
+                if (vokal.hasOwnProperty(char)) {
+                    vokal[char]++;
+                }
+            }
+            return vokal;
+
+        }
+
+        const DisplayVokaler = (text) => {
+            let vokalCount = countVokal(text);
+            let resultatDiv = document.getElementById('resultat');
+
+            let resultatText = '';
+            for(let vokal in vokalCount){
+                resultatText += `${vokal}: ${vokalCount[vokal]}<br>`;
+            }
+
+            resultatDiv.innerHTML = resultatText;
+        }
+
+
+        DisplayVokaler("Dette tester tekst med mange vokaler");
+        
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
